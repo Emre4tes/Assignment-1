@@ -16,12 +16,9 @@ export class CategoryListComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.loadCategories();
+    // Kategorileri manuel olarak yüklemeye gerek yok çünkü categories$ zaten verileri yansıtıyor
   }
-  loadCategories() {
-    this.categoryService.getCategories().subscribe(categories => {
-      this.categories = categories;});
-  }
+
 
   removeCategory(categoryId: number): void {
     this.categoryService.removeCategory(categoryId);
